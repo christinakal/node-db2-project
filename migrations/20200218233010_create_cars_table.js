@@ -22,4 +22,6 @@ exports.up = function(knex) {
 };
 
 // how to undo the changes
-exports.down = function(knex) {};
+exports.down = function(knex) {
+  return knex.schema.dropTableIfExists("cars");
+};
